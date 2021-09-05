@@ -1,0 +1,7 @@
+# Settings file in YAML
+
+node:
+  name: ${SERVICE_NAME}-logstash
+
+log:
+  level: info
