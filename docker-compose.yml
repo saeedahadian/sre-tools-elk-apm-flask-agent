@@ -20,8 +20,13 @@ services:
     restart: unless-stopped
     env_file: .env
     environment:
-      - ELASTICHOST=${ELASTICHOST}
+      - ELASTICHOST=${ELASTICSEARCH_HOST}
     volumes:
+      - certs:$CERTS_DIR
       - ./logstash/pipeline:/usr/share/logstash/pipeline
       - ./logstash/settings:/usr/share/logstash/config
       
+volumes:
+  certs:
+    external: true
+    name: elastic-stack-certs
