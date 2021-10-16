@@ -24,7 +24,7 @@ class ApmConfigModule:
                 "class": "logging.handlers.RotatingFileHandler",
                 "formatter": "elastic",
                 "level": "INFO",
-                "filename": "./logs/app.log",
+                "filename": "./flask_apm_agent/trace_logs/app.log",
                 "maxBytes": 10 * 1024 * 1024,
                 "backupCount": 20,
             },
@@ -32,7 +32,7 @@ class ApmConfigModule:
                 "class": "logging.handlers.RotatingFileHandler",
                 "formatter": "elastic",
                 "level": "ERROR",
-                "filename": "./logs/app-error.log",
+                "filename": "./flask_apm_agent/trace_logs/app_error.log",
                 "maxBytes": 10 * 1024 * 1024,
                 "backupCount": 20,
             },
@@ -53,8 +53,8 @@ class ApmConfigModule:
     @staticmethod
     def elasticApm(config):
         return {
-            "SERVICE_NAME": config["SERVICE_NAME"],
-            "SERVER_URL": "http://10.1.19.1:9204",
-            "ENVIRONMENT": config["ENVIRONMENT"],
+            "SERVICE_NAME": ,#TODO,
+            "SERVER_URL": "https://10.1.19.1:9204",
+            "ENVIRONMENT": ,#TODO,
             "DEBUG": True,
         }
