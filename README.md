@@ -5,21 +5,30 @@ file should be put aside other project files in _the root_ of the
 project. The resulting logs are created inside the `logs` directory in
 the root of the project.
 
+## PreSetup
+You might need to source your `venv` before-hand and use this command
+
+`python3 -m  venv  venv`
+
+`source source venv/bin/activate`
+
+
+
 ## Setup
 
-To setup flask for using this configuration, follow these steps:
+‌To setup flask for using this configuration, follow these steps:
 
 1. Install Elastic APM agent using pip:
 
 ```bash
 pip install elastic-apm[flask]
 ```
-
-You might need to source your `venv` before-hand and use this command
 to update your `requirements.txt`.
 ```bash
 pip freeze > requirements.txt
 ```
+
+
 
 2. Import these modules in your app's main file:
 
@@ -48,8 +57,10 @@ service's appropriate values inside `apmconfigmodule.py`.
 
 ```python
 elasticApm = {
-    "SERVICE_NAME": "your-service-name",
-    "ENVIRONMENT": "your-environment"
+     "SERVICE_NAME": "qa_api",
+     "SERVER_URL": "http://ai-monitoring.emofid.com:9204",
+     "ENVIRONMENT": "development",
+     "DEBUG": True,
 }
 ```
 
