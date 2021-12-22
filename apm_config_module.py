@@ -50,11 +50,9 @@ class ApmConfigModule:
         },
     }
 
-    @staticmethod
-    def elasticApm(config):
-        return {
-            "SERVICE_NAME": ,#TODO,
-            "SERVER_URL": "https://10.1.19.1:9204",
-            "ENVIRONMENT": ,#TODO,
-            "DEBUG": True,
-        }
+    elasticApm = {
+        "SERVICE_NAME": "service_name_here",
+        "SERVER_URL": "apm_server_address",
+        "ENVIRONMENT": "service_environment_here",
+        "DEBUG": True,
+    }

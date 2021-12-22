@@ -1,2 +1,5 @@
 # Python Cache
 __pycache__
+
+# Service Logs
+trace_logs/app*
