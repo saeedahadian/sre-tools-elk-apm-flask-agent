@@ -65,4 +65,4 @@ So far, we added APM to our project's source code. It's time to edit the `apm_co
 
 Replace `service_name_here`, `apm_server_address`, and `service_environment_here` fields with appropriate values.
 
-Everything is setup and ready to use!
+Everything is ready to use!
